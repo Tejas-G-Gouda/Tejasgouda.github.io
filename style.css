@@ -1,0 +1,152 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.heading{
+    text-align: center;
+    padding: 3vh;
+    background-color: rgba(6, 23, 84, 0.805);
+    color: white;
+    width: 100vw;
+}
+
+.choices{
+    display: flex;
+    height: 35vh;
+    align-items: center;
+    justify-content: center;
+}
+.choices img{
+    object-fit: cover;
+    height: 20vh;
+    margin: 20px;
+    border-radius: 50%;
+    width: 20vh;
+    border: 2px solid transparent;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+.choices img:hover{
+    opacity: 0.8;
+}
+.choices img:active{
+    border: 2px solid black;
+    transform: scale(1.05);
+    opacity: 1;
+}
+.score-board{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4rem;
+    height: 20vh;
+
+}
+.score{
+    margin: 70px;
+}
+#user-score,#comp-score{
+    font-size: 3rem;
+    margin-left: 10px;
+}
+.choice-display img{
+    border: 2px solid black;
+    object-fit: cover;
+    height: 10vh;
+    border-radius: 50%;
+    width: 10vh;
+}
+
+.msg-container{
+    display: flex;
+    justify-content: center;
+    height: 15vh;
+}
+#msg{
+    font-size: 1.8rem;
+    background-color: rgb(53, 139, 139);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 15px;
+    align-self: flex-start;
+}
+.new_game{
+    font-size: 1.5rem;
+    border-radius: 30px;
+    padding: 10px 20px;
+    color: white;
+    background-color: rgba(6, 23, 84, 0.750);
+    border: 2px solid black;
+    align-self: flex-end;
+    transition: transform 0.3s ease;
+}
+.new_game:active{
+    transform: scale(1.01);
+}
+
+
+
+/* responsiveness  */
+@media (max-width : 650px ){
+    
+    .choices  .choices img{
+        height: 12vh;
+        width: 12vh;
+    }
+    .choices img{
+        margin: 10px;
+    }
+    .score-board{
+        flex-direction: column;
+        gap: 10px;
+        margin: 50px 0 ;
+    }
+    .score-board .score{
+        margin: 10px;
+    }
+    .score-board .choice-display img{
+        height: 8vh;
+        width: 8vh;
+    }
+    #msg{
+        font-size: 1rem;
+        align-self: flex-end;
+    }
+    .new_game{
+        font-size: 1rem;
+        margin-top: -50px;
+    }
+    
+}
+
+@media (max-width : 480px){
+    .heading{
+        padding: 2vh;
+    }
+    .choices img{
+        margin: 10px;
+    }
+    
+    .choices img{
+        height: 12vh;
+        width: 12vh;
+    }
+    .score-board .choice-display img{
+        height: 6vh;
+        width: 6vh;
+    }
+    #msg{
+        font-size: 0.9rem;
+        align-self: flex-end;
+        padding: 8px 12px;
+    }
+    .msg-container{
+        height: 10vh;
+    }
+    .new_game{
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+}
